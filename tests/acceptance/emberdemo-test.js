@@ -8,6 +8,6 @@ test('visiting /', function(assert) {
 
   andThen(function() {
     assert.equal(currentURL(), '/');
-	assert.equal(find('h2').text(), "Grand Old Mansion", 'should list rental title');
+	
   });
 });
