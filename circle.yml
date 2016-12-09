@@ -1,8 +1,8 @@
 ## Customize the test machine
 machine:
 
-  timezone:
-    America/Los_Angeles # Set the timezone
+  #timezone:
+  #  America/Los_Angeles # Set the timezone
  
   # Override /etc/hosts
   hosts:
@@ -26,7 +26,7 @@ dependencies:
     - npm install
     - npm install -g bower
     - npm install -g ember-cli
-    - npm install phantomjs # install from a different package manager 
+  #  - npm install phantomjs # install from a different package manager 
 
   override:
        
@@ -37,11 +37,11 @@ dependencies:
     - "~/custom_2" # relative to the user's home directory
 
 ## Customize database setup
-database:
-  override:
+#database:
+ # override:
     # replace CircleCI's generated database.yml
-    - cp config/database.yml.ci config/database.yml
-    - bundle exec rake db:create db:schema:load
+  #  - cp config/database.yml.ci config/database.yml
+  #  - bundle exec rake db:create db:schema:load
 
 ## Customize test commands
 test:
