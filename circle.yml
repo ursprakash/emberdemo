@@ -23,6 +23,7 @@ checkout:
 ## Customize dependencies
 dependencies:
   pre:
+    - bower install
     - npm install
     - npm install -g bower
     - npm install -g ember-cli
@@ -46,7 +47,7 @@ dependencies:
 ## Customize test commands
 test:
   override:
-    - ember test # use PHPunit for testing
+    - ember test # use ember test for testing
   post:
     - bundle exec rake jasmine:ci: # add an extra test type
         environment:
