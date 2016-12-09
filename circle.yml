@@ -28,15 +28,13 @@ checkout:
 ## Customize dependencies
 dependencies:
   pre:
-    - npm install coffeescript # install from a different package manager
-    - gem uninstall bundler # use a custom version of bundler
-    - gem install bundler --pre
+    - npm install
+    - npm install -g bower
+    - npm install -g ember-cli
+    - npm install phantomjs# install from a different package manager 
 
   override:
-    - bundle install: # note ':' here
-        timeout: 180 # fail if command has no output for 3 minutes
-        # IMPORTANT NOTE: ^^ the timeout modifier above must be
-        # double indented (four spaces) from the previous line
+     
   
   # we automatically cache and restore many dependencies between
   # builds. If you need to, you can add custom paths to cache:
@@ -54,7 +52,7 @@ database:
 ## Customize test commands
 test:
   override:
-    - phpunit test/unit-tests # use PHPunit for testing
+    - ember test # use PHPunit for testing
   post:
     - bundle exec rake jasmine:ci: # add an extra test type
         environment:
@@ -66,7 +64,7 @@ deployment:
   staging:
     branch: master
     heroku:
-      appname: foo-bar-123
+      appname: emberdemo
 
 ## Custom notifications
 notify:
