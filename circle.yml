@@ -55,14 +55,14 @@ test:
      #     RACK_ENV: test
 
 ## Customize deployment commands
-deployment:
-  staging:
-    branch: master
-    heroku:
-      appname: emberdemo
+#deployment:
+ # staging:
+  #  branch: master
+   # heroku:
+    #  appname: emberdemo
 
 ## Custom notifications
-notify:
-  webhooks:
+#notify:
+  #webhooks:
     # A list of hashes representing hooks. Only the url field is supported.
-    - url: https://someurl.com/hooks/circle
+   # - url: https://someurl.com/hooks/circle
